@@ -15,19 +15,20 @@ let validator={
            }
             
         }
+     
         if (send) {
             form.submit();
         }
     },
     checkInput:(input) =>{
         let rules = input.getAttribute('data-rules');
-        
+
         if (rules = null) {
             rules = rules.split('|');
             for(let k  in rules){
                 let rDetails = rules[k].split('=');
                 switch(rDetails[0]){
-                    case 'require':
+                    case 'required':
                         if (input.value == '') {
                             return 'Este campo é obrigatório'
                         }
@@ -39,8 +40,11 @@ let validator={
             }
         }
         return true;
+    },
+    showError:(input,error) =>{
+        input.style.borderColor = 'red';
     }
-}
+};
 
 let form = document.querySelector('.validator');
 form.addEventListener('submit',validator.handleSubmit); 
