@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDADOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="screen">
+        <div class="leftside">
+            <img src="img/study.png" alt="">
+        </div>
+        <div class="rightside">
+            <h1>Sign in</h1> 
+
+            <form action="POST" class="validator">
+                <label for="">
+                    Name: <br/>
+                    <input type="text" name='name' data-rules="require"> <!--regras, campo obrigatorio pos envio-->
+                </label>
+                <label for="">
+                    Email: <br>
+                    <input type="email" name='email'>
+                </label>
+                <label for="">
+                    password: <br>
+                    <input type="password" name='password'>
+                </label>
+                <label for="">
+                    <input type="submit" value='cadastrar'>
+                </label>
+            </form>
+            <div>
+                <a href="">Login</a>   
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
